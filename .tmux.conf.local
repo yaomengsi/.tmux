@@ -448,6 +448,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-save-interval '15'
 set -g @continuum-restore 'on'
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-strategy-nvim 'session'
@@ -460,10 +461,11 @@ set -g @dracula-show-flags false
 set -g @dracula-refresh-rate 10
 set -g @dracula-show-empty-plugins false
 set -g @dracula-show-powerline true
-set -g @dracula-show-left-icon "#H | #S | #W"
+set -g @dracula-transparent-powerline-bg true
+# set -g @dracula-show-left-icon "#H | #S | #W"
 
 # git cwd gpu-usage time kubernetes-context
-set -g @dracula-plugins "continuum ssh-session tmux-ram-usage cpu-usage ram-usage weather network-bandwidth"
+set -g @dracula-plugins "continuum ssh-session cpu-usage ram-usage tmux-ram-usage weather network-bandwidth"
 set -g @dracula-continuum-mode countdown
 set -g @dracula-continuum-time-threshold 60
 set -g @dracula-show-ssh-only-when-connected true
