@@ -463,14 +463,21 @@ set -g @dracula-show-empty-plugins false
 set -g @dracula-show-powerline true
 set -g @dracula-transparent-powerline-bg true
 # set -g @dracula-show-left-icon "#H | #S | #W"
+set -g @dracula-show-left-icon "#S | #W"
 
 # git cwd gpu-usage time kubernetes-context
 set -g @dracula-plugins "continuum ssh-session cpu-usage ram-usage tmux-ram-usage weather network-bandwidth"
 set -g @dracula-continuum-mode countdown
-set -g @dracula-continuum-time-threshold 60
+set -g @dracula-continuum-time-threshold 15
 set -g @dracula-show-ssh-only-when-connected true
-set -g @dracula-network-bandwidth-interval 10
+#    󰍛 󰘚 󰻟 󰻠
+set -g @dracula-cpu-usage-label " "
+#    󰍛 󰘚
+set -g @dracula-ram-usage-label " "
+set -g @dracula-tmux-ram-usage-label " "
+set -g @dracula-network-bandwidth-interval 5
 set -g @dracula-show-fahrenheit false
+set -g @dracula-show-location false
 set -g @dracula-fixed-location "shenzhen"
 
 
