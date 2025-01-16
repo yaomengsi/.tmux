@@ -457,16 +457,18 @@ set -g @plugin 'alexwforsythe/tmux-which-key'
 set-option -g @plugin 'b0o/tmux-autoreload'
 
 set -g @plugin 'dracula/tmux'
-set -g @dracula-show-flags false
+set -g @dracula-show-flags true
 set -g @dracula-refresh-rate 10
 set -g @dracula-show-empty-plugins false
 set -g @dracula-show-powerline true
 set -g @dracula-transparent-powerline-bg true
 # set -g @dracula-show-left-icon "#H | #S | #W"
-set -g @dracula-show-left-icon "#S | #W"
+# set -g @dracula-show-left-icon "#S | #W"
+set -g @dracula-show-left-icon "#S"
 
 # git cwd gpu-usage time kubernetes-context
-set -g @dracula-plugins "continuum ssh-session cpu-usage ram-usage tmux-ram-usage weather network-bandwidth"
+# cpu-usage network-bandwidth
+set -g @dracula-plugins "continuum ssh-session weather ram-usage tmux-ram-usage"
 set -g @dracula-continuum-mode countdown
 set -g @dracula-continuum-time-threshold 15
 set -g @dracula-show-ssh-only-when-connected true
