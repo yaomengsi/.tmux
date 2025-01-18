@@ -458,7 +458,7 @@ set-option -g @plugin 'b0o/tmux-autoreload'
 
 set -g @plugin 'dracula/tmux'
 set -g @dracula-show-flags true
-set -g @dracula-refresh-rate 10
+set -g @dracula-refresh-rate 5
 set -g @dracula-show-empty-plugins false
 set -g @dracula-show-powerline true
 set -g @dracula-transparent-powerline-bg true
@@ -467,10 +467,12 @@ set -g @dracula-transparent-powerline-bg true
 set -g @dracula-show-left-icon "#S"
 
 # git cwd gpu-usage time kubernetes-context
-# cpu-usage network-bandwidth
-set -g @dracula-plugins "continuum ssh-session weather ram-usage tmux-ram-usage"
+# cpu-usage tmux-ram-usage network-bandwidth
+set -g @dracula-plugins "continuum ssh-session weather ram-usage"
+# countdown time alert interval
 set -g @dracula-continuum-mode countdown
 set -g @dracula-continuum-time-threshold 15
+set -g @continuum-save-interval 30
 set -g @dracula-show-ssh-only-when-connected true
 #    󰍛 󰘚 󰻟 󰻠
 set -g @dracula-cpu-usage-label " "
