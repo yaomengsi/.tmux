@@ -446,12 +446,6 @@ tmux_conf_uninstall_plugins_on_reload=true
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 #set -g @plugin 'tmux-plugins/tmux-cpu'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @continuum-save-interval '15'
-set -g @continuum-restore 'on'
-set -g @resurrect-capture-pane-contents 'on'
-set -g @resurrect-strategy-nvim 'session'
 
 set -g @plugin 'alexwforsythe/tmux-which-key'
 set-option -g @plugin 'b0o/tmux-autoreload'
@@ -470,9 +464,8 @@ set -g @dracula-show-left-icon "#S"
 # cpu-usage tmux-ram-usage network-bandwidth
 set -g @dracula-plugins "continuum ssh-session weather ram-usage"
 # countdown time alert interval
-set -g @dracula-continuum-mode countdown
+set -g @dracula-continuum-mode alert
 set -g @dracula-continuum-time-threshold 15
-set -g @continuum-save-interval 30
 set -g @dracula-show-ssh-only-when-connected true
 #    󰍛 󰘚 󰻟 󰻠
 set -g @dracula-cpu-usage-label " "
@@ -483,6 +476,14 @@ set -g @dracula-network-bandwidth-interval 5
 set -g @dracula-show-fahrenheit false
 set -g @dracula-show-location false
 set -g @dracula-fixed-location "shenzhen"
+
+# continuum plugin to bottom, fix autosave
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-save-interval 15
+set -g @continuum-restore 'on'
+set -g @resurrect-capture-pane-contents 'on'
+set -g @resurrect-strategy-nvim 'session'
 
 
 # -- custom variables ----------------------------------------------------------
