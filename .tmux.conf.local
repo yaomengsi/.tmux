@@ -450,8 +450,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 set -g @plugin 'alexwforsythe/tmux-which-key'
 set-option -g @plugin 'b0o/tmux-autoreload'
 
-set -g @plugin 'dracula/tmux'
-set -g @dracula-show-flags true
+# set -g @plugin 'dracula/tmux'
+set -g @dracula-show-flags false
 set -g @dracula-refresh-rate 5
 set -g @dracula-show-empty-plugins false
 set -g @dracula-show-powerline true
@@ -462,7 +462,8 @@ set -g @dracula-show-left-icon "#S"
 
 # git cwd gpu-usage time kubernetes-context
 # cpu-usage tmux-ram-usage network-bandwidth
-set -g @dracula-plugins "continuum ssh-session weather ram-usage"
+# continuum ssh-session weather ram-usage
+set -g @dracula-plugins "cwd cpu-usage tmux-ram-usage continuum ssh-session weather ram-usage"
 # countdown time alert interval
 set -g @dracula-continuum-mode alert
 set -g @dracula-continuum-time-threshold 15
@@ -485,6 +486,8 @@ set -g @continuum-restore 'on'
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-strategy-nvim 'session'
 
+set -g window-status-format ''
+set -g window-status-current-format ''
 
 # -- custom variables ----------------------------------------------------------
 
